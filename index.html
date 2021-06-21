@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nico Ledesma | Front-end developer</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            color: hsl(230deg, 20%, 30%);
+            background-color: #f8f8f8;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 30vh 50px 50px;
+            min-height: 100vh;
+        }
+
+        .title {
+            flex-grow: 1;
+            margin-bottom: 1em;
+            font-size: 36px;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+            color: inherit;
+        }
+
+        @media (min-width: 640px) {
+            .title{
+                font-size: 8vw;
+                line-height: 1.2;
+            }
+        }
+
+        .dimmed {
+            color: hsl(230deg, 15%, 87%);
+        }
+
+        .links {
+            font-size: 18px;
+            letter-spacing: 0.05em;
+        }
+
+        @media (min-width: 640px) {
+            .links{
+                font-size: 24px;
+            }
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            margin-right: 1em;
+            padding-bottom: 2px;
+            text-decoration: none;
+            color: inherit;
+            transition: color 300ms ease-out;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            opacity: 0;
+            transform: translateY( -5px );
+            transition: all 300ms ease-out;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+        
+        a:hover {
+            color: hsla(230deg, 70%, 40%, 1);
+        }
+
+        a:hover::after {
+            opacity: 1;
+            transform: translateY( 0 );
+        }
+
+        a:active {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 class="title">
+            nico ledesma<br>
+            <span class="dimmed">front-end dev</span>
+        </h1>
+    
+        <p class="links">
+            &#8594; <a href="https://linkedin.com/in/nicolas-ledesma/" target="_blank">LinkedIn</a>
+            &#8594; <a href="mailto:&#110;&#105;&#099;&#111;&#108;&#097;&#115;&#046;&#108;&#101;&#100;&#101;&#115;&#109;&#097;&#056;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">Email</a>
+        </p>
+    </main>
+</body>
+</html>
